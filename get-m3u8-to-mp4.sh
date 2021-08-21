@@ -2,7 +2,7 @@
 
 ##
 # Usage:
-# ./gget-m3u8-to-mp4.sh URL OUTPUT
+# ./get-m3u8-to-mp4.sh URL OUTPUT
 # param1 : url of live streaming youtube program.
 # param2 : the file name output in mp4 format.
 #
