@@ -15,6 +15,14 @@
 URL=$1
 echo ${URL}
 
+if [ $# != 2 ]; then
+  TIMESTAMP=`date +%Y%m%d-%H%M%S`
+  ID=`echo $URL | cut -d "=" -f 2`
+  OUTPUT="${TIMESTAMP}-${ID}.mp4"
+else
+  OUTPUT="$2"
+fi
+
 ##
 # NUM is number of the best quality format.
 # command youtube-dl --list-fromats...
@@ -37,4 +45,4 @@ M3U8=`youtube-dl -f ${NUM} -g ${URL}`
 # 
 #
 ##
-ffmpeg -i "${M3U8}" -c copy -bsf:a aac_adtstoasc "$2"
+ffmpeg -i "${M3U8}" -c copy -bsf:a aac_adtstoasc "${OUTPUT}"
