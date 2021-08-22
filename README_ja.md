@@ -19,7 +19,8 @@ Youtubeのライブ配信の保存を予約録画したいときに使えるシ�
   
 例） ./get-m3u8-to-mp4.sh https://www.youtube.com/watch?v=ABCdEfGhijkL 60  
 出力ファイル名は省略できます。
-デフォルトでは、YYYY-MM-DD-<YoutubeID>.mp4 になります。  
+デフォルトでは、YYYY-MM-DD-ABCdEfGhijkL.mp4 になります。  
+ABCdEfGhijkL は Youtube 番組のIDです。  
 
 URL は、番組のURL
 DURATION は、録画時間（分）
