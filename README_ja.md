@@ -1,19 +1,28 @@
 # get-m3u8-to-mp4.sh とは？
 
 ## 概要
-Youtubeのライブ配信の保存をしたいときに使えるシェルスクリプトです。
+Youtubeのライブ配信の保存を予約録画したいときに使えるシェルスクリプトです。
 
 ##  目的
 保存したいYoutubeのライブ配信は、番組URLからm3u8ファイルを取得する必要があります。
 
 この手間を減らすために、シェルスクリプトに下記の引数を与えます。  
-1 . 番組のURL  
-2. 保存ファイル名  
+1. 番組のURL  
+2. 録画時間（分）
+3. 保存ファイル名  
 
 ## 使い方
-./get-m3u8-to-mp4.sh URL OUTPUT
+./get-m3u8-to-mp4.sh URL DURALTION(minitues) OUTPUT  
+例) ./get-m3u8-to-mp4.sh https://www.youtube.com/watch?v=ABCdEfGhijkL 60 output.mp4  
+  
+または  
+  
+例） ./get-m3u8-to-mp4.sh https://www.youtube.com/watch?v=ABCdEfGhijkL 60  
+出力ファイル名は省略できます。
+デフォルトでは、YYYY-MM-DD-<YoutubeID>.mp4 になります。  
 
 URL は、番組のURL
+DURATION は、録画時間（分）
 OUTPUT は、保存したいファイル名
 を書きます。
 
